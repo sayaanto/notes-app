@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Notes App</h1>
+    </header>
+
+    <main class="grid-container">
+        <section class="input-section">
+            <h2>Tambah Catatan</h2>
+            <form id="note-form">
+                <input type="text" id="note-title" placeholder="Judul Catatan" required>
+                <textarea id="note-body" placeholder="Isi Catatan" required></textarea>
+                <button type="submit">Tambah Catatan</button>
+            </form>
+
+            <h3>Filter Catatan Berdasarkan Tanggal</h3>
+            <input type="date" id="filter-date">
+        </section>
+
+        <section class="notes-section">
+            <h2>Daftar Catatan</h2>
+            <div id="note-container" class="note-grid"></div>
+        </section>
+    </main>
+
+    <div id="notification" class="hidden">Catatan berhasil ditambahkan!</div>
+    <div id="delete-confirmation" class="hidden">
+        <p>Yakin ingin menghapus catatan ini?</p>
+        <button id="confirm-delete">Ya</button>
+        <button id="cancel-delete">Tidak</button>
+    </div>
+
+    <script src="note-item.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
